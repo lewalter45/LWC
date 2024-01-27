@@ -1,118 +1,66 @@
-/* Reset */
+/* styles.css */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-}
-/* Base Styles */
 body {
-  background-color: #e8f0f7;
   font-family: "Public Sans", sans-serif;
-  height: 5000px;
+  /* Add any other global styles here */
 }
 
-/*Normal Styles*/
-.header {
-  background-color: #fff;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+.header-main {
+  background-color: #ccae61;
+  color: #fff;
+  padding: 10px;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically in flex container */
+  justify-content: flex-start; /* Move items to the start */
 }
 
-.top-bar {
-  display: flex;
-  align-items: center;
+.email,
+.phone {
+  display: flex; /* Use flexbox for layout within the header */
+  align-items: center; /* Center items vertically in flex container */
 }
-.top-bar__content {
-  display: flex;
-  align-items: center;
+
+.email {
+  margin-right: 10px; /* Adjust the margin for the email */
+}
+
+.phone {
+  display: flex; /* Use flexbox for layout within the header */
+  align-items: center; /* Center items vertically in flex container */
+}
+
+/* No need for margin adjustments here */
+
+.social-media {
+  margin-left: auto; /* Push social media icons to the right */
 }
 
 .icon {
-  margin-right: 1rem;
+  margin-right: 5px;
 }
 
-.bottom-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  background-color: #fff;
-  position: sticky;
-  bottom: 0;
-  z-index: 100;
-}
-
-.bottom-bar__content {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  width: 100px;
-}
-
-.logo__img {
-  width: 100%;
-}
-
-.logo__text {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1e266d;
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-}
-
-.navigation__list {
-  margin-right: 1rem;
-}
-
-.navigation__item {
-  margin-right: 1rem;
-}
-
-.navigation__link {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #1e266d;
-}
-
-.btn {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 700;
+a {
   color: #fff;
-  background-color: #1e266d;
-  border: none;
-  cursor: pointer;
+  text-decoration: none;
+}
+/* styles.css */
+/* ... previous code ... */
+
+.email a:hover,
+.phone a:hover {
+  color: #5d3fd3; /* Change link color on hover */
 }
 
-.hamburger {
-  display: none;
+.icon:hover {
+  /* Specific hover styles for each social media icon */
+  /* Replace with appropriate fill or color properties for each icon */
+  fill: #3b5998; /* Example for Facebook blue */
 }
 
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #1e266d;
-  margin: 5px 0;
-  transition: 0.4s;
-}
+/* responsive.css */
+
+/* Add your responsive styles here */
