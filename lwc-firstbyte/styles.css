@@ -1,4 +1,5 @@
 /* styles.css */
+
 * {
   margin: 0;
   padding: 0;
@@ -43,22 +44,33 @@ body {
   margin-right: 5px;
 }
 
+.social-media .facebook-icon {
+  color: white;
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+.social-media .facebook-icon:hover {
+  color: #3b5998; /* Change color to Facebook blue */
+  text-decoration: none; /* Remove underline from anchor link */
+}
+
+.social-media .facebook-icon span {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Smooth opacity transition */
+}
+
+.social-media .facebook-icon:hover span {
+  opacity: 1;
+}
+
 a {
   color: #fff;
   text-decoration: none;
 }
-/* styles.css */
-/* ... previous code ... */
 
 .email a:hover,
 .phone a:hover {
   color: #5d3fd3; /* Change link color on hover */
-}
-
-.icon:hover {
-  /* Specific hover styles for each social media icon */
-  /* Replace with appropriate fill or color properties for each icon */
-  fill: #3b5998; /* Example for Facebook blue */
 }
 
 /* responsive.css */
