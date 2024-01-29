@@ -10,10 +10,27 @@ body {
   font-family: "Public Sans", sans-serif;
   display: grid;
   place-items: center;
-  background-color: #ccae61;
+  background-color: #fbfbfa;
   margin: 0;
   padding-top: 70px; /* Adjust this value based on the height of your navbar */
   /* existing styles... */
+}
+
+/* styles.css */
+
+/* ... other styles ... */
+
+.header-container {
+  /* Assuming your header container has this class */
+  position: relative; /* Make the header container a positioning context */
+}
+
+.navbar {
+  /* ... other styles ... */
+  position: relative; /* Position it within the header container */
+  top: 0; /* Place it at the top of the header container */
+  width: 100%; /* Ensure it spans the full width of the header container */
+  /* Remove any `left` or `right` properties, as they're not needed within the container */
 }
 
 .button {
