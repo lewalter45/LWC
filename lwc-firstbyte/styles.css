@@ -3,69 +3,128 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Public Sans", sans-serif;
-  /* Add any other global styles here */
+  display: grid;
+  place-items: center;
+  background-color: #ccae61;
+  margin: 0;
+  padding-top: 70px; /* Adjust this value based on the height of your navbar */
+  /* existing styles... */
 }
 
-.header-main {
+.button {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin: 0 5px;
+  overflow: hidden;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ccae61;
+  transition: all 0.3s ease-out;
+}
+
+.button:hover {
+  width: 200px;
+}
+
+.button .icon {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 30px;
+  transition: all 0.3s ease-out;
+}
+
+.button:nth-child(1) .icon:hover {
+  background-color: #316ff6;
+}
+
+.button:nth-child(2) .icon:hover {
+  background-color: #1da1f2;
+}
+
+.button:nth-child(3) .icon:hover {
+  background-color: #4267b2;
+}
+
+.button:nth-child(4) .icon:hover {
+  background-color: #0077b5;
+}
+
+.button:nth-child(5) .icon:hover {
+  background-color: #ff0000;
+}
+
+.button .icon i {
+  font-size: 25px;
+  line-height: 30px;
+  transition: all 0.3s ease-out;
+}
+
+.button span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+.button:nth-child(1) span {
+  background-color: #316ff6;
+}
+.button:nth-child(2) span {
+  background-color: #1da1f2;
+}
+
+.button:nth-child(3) span {
+  background-color: #4267b2;
+}
+
+.button:nth-child(4) span {
+  background-color: #0077b5;
+}
+
+.button:nth-child(5) span {
+  background-color: #ff0000;
+}
+
+.navbar {
   background-color: #ccae61;
   color: #fff;
-  padding: 10px;
+  padding: 10px 20px; /* 10px top/bottom, 20px left/right padding */
   display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between email/phone and social media */
   align-items: center; /* Center items vertically in flex container */
-  justify-content: flex-start; /* Move items to the start */
+  max-width: 100%; /* To limit the width of the header */
+  box-sizing: border-box; /* Include padding and border in the total width/height */
+  position: fixed; /* Fix the position of the navbar */
+  top: 0; /* Position it at the top of the page */
+  left: 0; /* Position it at the left of the page */
+  width: 100%; /* Make it span the full width of the page */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  /* existing styles... */
 }
 
 .email,
 .phone {
   display: flex; /* Use flexbox for layout within the header */
   align-items: center; /* Center items vertically in flex container */
+  margin-left: 10px;
 }
 
-.email {
-  margin-right: 10px; /* Adjust the margin for the email */
-}
-
-.phone {
-  display: flex; /* Use flexbox for layout within the header */
-  align-items: center; /* Center items vertically in flex container */
-}
-
-/* No need for margin adjustments here */
-
-.social-media {
-  margin-left: auto; /* Push social media icons to the right */
-}
-
-.icon {
-  margin-right: 5px;
-}
-
-.social-media .facebook-icon {
-  color: white;
-  transition: color 0.3s ease-in-out; /* Smooth color transition */
-}
-
-.social-media .facebook-icon:hover {
-  color: #3b5998; /* Change color to Facebook blue */
-  text-decoration: none; /* Remove underline from anchor link */
-}
-
-.social-media .facebook-icon span {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out; /* Smooth opacity transition */
-}
-
-.social-media .facebook-icon:hover span {
-  opacity: 1;
-}
-
-a {
-  color: #fff;
+.email a,
+.phone a {
+  color: #ffffff; /* Default color */
   text-decoration: none;
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .email a:hover,
