@@ -130,6 +130,20 @@ body {
   /* existing styles... */
 }
 
+/* styles.css */
+
+/* ... existing styles ... */
+
+.email .icon {
+  margin-right: 5px; /* Adjust the margin as needed */
+}
+
+.phone .icon {
+  margin-right: 5px; /* Adjust the margin as needed */
+}
+
+/* ... existing styles ... */
+
 .email,
 .phone {
   display: flex; /* Use flexbox for layout within the header */
