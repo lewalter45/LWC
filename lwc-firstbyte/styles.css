@@ -1,36 +1,55 @@
 /* styles.css */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Public Sans", sans-serif;
-  display: grid;
-  place-items: center;
-  background-color: #fbfbfa;
-  margin: 0;
-  padding-top: 70px; /* Adjust this value based on the height of your navbar */
-  /* existing styles... */
-}
-
-/* styles.css */
-
 /* ... other styles ... */
 
-.header-container {
+.navbar-container .top-bar__content {
+  color: #fbfbfa;
   /* Assuming your header container has this class */
   position: relative; /* Make the header container a positioning context */
 }
 
+.top-bar {
+  display: flex;
+}
+
+.top-bar__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  height: 70px;
+  background-color: #ccae61;
+  color: #fbfbfa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
 .navbar {
-  /* ... other styles ... */
-  position: relative; /* Position it within the header container */
-  top: 0; /* Place it at the top of the header container */
-  width: 100%; /* Ensure it spans the full width of the header container */
-  /* Remove any `left` or `right` properties, as they're not needed within the container */
+  background-color: #ccae61;
+  color: #fbfbfa;
+  padding: 10px 20px; /* 10px top/bottom, 20px left/right padding */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between email/phone and social media */
+  align-items: center; /* Center items vertically in flex container */
+  max-width: 100%; /* To limit the width of the header */
+  box-sizing: border-box; /* Include padding and border in the total width/height */
+  position: fixed; /* Fix the position of the navbar */
+  top: 0; /* Position it at the top of the page */
+  left: 0; /* Position it at the left of the page */
+  width: 100%; /* Make it span the full width of the page */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  padding-right: 10px; /* Add 10px of padding to the right end of the navbar */
+}
+
+.navbar .social-media-item {
+  margin-right: 10px; /* Add 10px of margin to the right of each social media item */
+}
+
+.navbar-container .top-bar__content:hover {
+  color: #5d3fd3;
 }
 
 .button {
@@ -43,7 +62,7 @@ body {
   cursor: pointer;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   background-color: #ccae61;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .button:hover {
@@ -58,7 +77,7 @@ body {
   border-radius: 50px;
   box-sizing: border-box;
   line-height: 30px;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .button:nth-child(1) .icon:hover {
@@ -84,7 +103,7 @@ body {
 .button .icon i {
   font-size: 25px;
   line-height: 30px;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .button span {
@@ -97,6 +116,7 @@ body {
 .button:nth-child(1) span {
   background-color: #316ff6;
 }
+
 .button:nth-child(2) span {
   background-color: #1da1f2;
 }
@@ -115,7 +135,7 @@ body {
 
 .navbar {
   background-color: #ccae61;
-  color: #fff;
+  color: #fbfbfa;
   padding: 10px 20px; /* 10px top/bottom, 20px left/right padding */
   display: flex; /* Use flexbox for layout */
   justify-content: space-between; /* Space between email/phone and social media */
@@ -129,40 +149,3 @@ body {
   z-index: 1000; /* Ensure it stays on top of other elements */
   /* existing styles... */
 }
-
-/* styles.css */
-
-/* ... existing styles ... */
-
-.email .icon {
-  margin-right: 5px; /* Adjust the margin as needed */
-}
-
-.phone .icon {
-  margin-right: 5px; /* Adjust the margin as needed */
-}
-
-/* ... existing styles ... */
-
-.email,
-.phone {
-  display: flex; /* Use flexbox for layout within the header */
-  align-items: center; /* Center items vertically in flex container */
-  margin-left: 10px;
-}
-
-.email a,
-.phone a {
-  color: #ffffff; /* Default color */
-  text-decoration: none;
-  transition: color 0.3s ease; /* Smooth color transition */
-}
-
-.email a:hover,
-.phone a:hover {
-  color: #5d3fd3; /* Change link color on hover */
-}
-
-/* responsive.css */
-
-/* Add your responsive styles here */
