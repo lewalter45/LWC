@@ -1,151 +1,100 @@
-/* styles.css */
-
-/* ... other styles ... */
-
-.navbar-container .top-bar__content {
-  color: #fbfbfa;
-  /* Assuming your header container has this class */
-  position: relative; /* Make the header container a positioning context */
+/* Reset styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.top-bar {
-  display: flex;
+/* Global styles */
+body {
+  font-family: "Public Sans", sans-serif;
+  background-color: #fbfbfa;
 }
 
-.top-bar__content {
+/* Header styles */
+.header-main {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #ccae61;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   padding: 0 20px;
-  height: 70px;
-  background-color: #ccae61;
+}
+
+.header-main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.email a,
+.phone a {
   color: #fbfbfa;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  text-decoration: none; /* Added to remove underline from links */
+}
+
+.email a:hover,
+.phone a:hover {
+  color: #5d3fd3;
+  text-decoration: none; /* Ensures underline is removed on hover as well */
 }
 
 .navbar {
-  background-color: #ccae61;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar-social-media .button {
   color: #fbfbfa;
-  padding: 10px 20px; /* 10px top/bottom, 20px left/right padding */
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space between email/phone and social media */
-  align-items: center; /* Center items vertically in flex container */
-  max-width: 100%; /* To limit the width of the header */
-  box-sizing: border-box; /* Include padding and border in the total width/height */
-  position: fixed; /* Fix the position of the navbar */
-  top: 0; /* Position it at the top of the page */
-  left: 0; /* Position it at the left of the page */
-  width: 100%; /* Make it span the full width of the page */
-  z-index: 1000; /* Ensure it stays on top of other elements */
-  padding-right: 10px; /* Add 10px of padding to the right end of the navbar */
 }
 
-.navbar .social-media-item {
-  margin-right: 10px; /* Add 10px of margin to the right of each social media item */
-}
-
-.navbar-container .top-bar__content:hover {
+.navbar-social-media .button:hover {
   color: #5d3fd3;
 }
 
-.button {
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  margin: 0 5px;
-  overflow: hidden;
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-  background-color: #ccae61;
-  transition: all 0.2s ease-out;
+/* Header main navigation and social media styles */
+.header-main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.button:hover {
-  width: 200px;
+.header-main-social-media {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
-
-.button .icon {
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  text-align: center;
-  border-radius: 50px;
-  box-sizing: border-box;
-  line-height: 30px;
-  transition: all 0.2s ease-out;
+.open-status {
+  display: none;
 }
-
-.button:nth-child(1) .icon:hover {
-  background-color: #316ff6;
-}
-
-.button:nth-child(2) .icon:hover {
-  background-color: #1da1f2;
-}
-
-.button:nth-child(3) .icon:hover {
-  background-color: #4267b2;
-}
-
-.button:nth-child(4) .icon:hover {
-  background-color: #0077b5;
-}
-
-.button:nth-child(5) .icon:hover {
-  background-color: #ff0000;
-}
-
-.button .icon i {
-  font-size: 25px;
-  line-height: 30px;
-  transition: all 0.2s ease-out;
-}
-
-.button span {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 30px;
-  margin-left: 10px;
-}
-
-.button:nth-child(1) span {
-  background-color: #316ff6;
-}
-
-.button:nth-child(2) span {
-  background-color: #1da1f2;
-}
-
-.button:nth-child(3) span {
-  background-color: #4267b2;
-}
-
-.button:nth-child(4) span {
-  background-color: #0077b5;
-}
-
-.button:nth-child(5) span {
-  background-color: #ff0000;
-}
-
-.navbar {
-  background-color: #ccae61;
+.current-time {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   color: #fbfbfa;
-  padding: 10px 20px; /* 10px top/bottom, 20px left/right padding */
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space between email/phone and social media */
-  align-items: center; /* Center items vertically in flex container */
-  max-width: 100%; /* To limit the width of the header */
-  box-sizing: border-box; /* Include padding and border in the total width/height */
-  position: fixed; /* Fix the position of the navbar */
-  top: 0; /* Position it at the top of the page */
-  left: 0; /* Position it at the left of the page */
-  width: 100%; /* Make it span the full width of the page */
-  z-index: 1000; /* Ensure it stays on top of other elements */
-  /* existing styles... */
+}
+.email,
+.phone,
+.date-time {
+  margin-right: 5px;
+}
+.time-and-day {
+  display: flex;
+  align-items: center;
+}
+
+/* Additional Styles */
+.current-time .fas.fa-clock {
+  margin-right: 5px; /* Added margin between clock icon and day of the week */
+  color: #fbfbfa; /* Changed clock icon color */
 }
