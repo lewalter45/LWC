@@ -1,100 +1,297 @@
-/* Reset styles */
+/* Reset default browser styles */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* Global styles */
+/* Body/Page Styles */
 body {
   font-family: "Public Sans", sans-serif;
-  background-color: #fbfbfa;
+  background-image: url("construction-background-pic.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 }
 
-/* Header styles */
+/* Overlay */
+/* Header */
 .header-main {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 30px;
-  background-color: #ccae61;
+  color: #fbfbfa;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  background-color: #ccae61;
+  height: 30px;
+  position: relative;
+  z-index: 5;
+  width: 100%;
 }
 
-.header-main-nav {
+/* Header Icons */
+.email,
+.phone,
+.clock {
   display: flex;
   align-items: center;
+  margin-right: 10px;
 }
 
+.icon {
+  margin-right: 5px;
+}
+
+/* Header Social Icons */
+.header-main-social-media {
+  margin-left: auto;
+}
+
+.social-media {
+  display: flex;
+}
+
+.button {
+  color: #fbfbfa;
+  border: none;
+  padding: 5px 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #ccae61;
+}
+
+/* Existing CSS styles */
+
+/* New hover effect for social media icons */
+.social-media a.button {
+  margin-right: 10px; /* Adjust spacing between icons */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-media a.button:hover {
+  transform: scale(1.1); /* Increase size on hover */
+}
+
+/* Specific hover effects for each social media icon */
+.social-media a.button i.fa-facebook-f:hover {
+  color: #3b5998; /* Facebook color on hover */
+}
+
+.social-media a.button i.fa-twitter:hover {
+  color: #00aced; /* Twitter color on hover */
+}
+
+.social-media a.button i.fa-user-friends:hover {
+  color: #d6eaf8; /* Facebook Group color on hover */
+}
+
+.social-media a.button i.fa-linkedin:hover {
+  color: #007bb6; /* LinkedIn color on hover */
+}
+
+.social-media a.button i.fa-youtube:hover {
+  color: #bb0000; /* YouTube color on hover */
+}
+
+/* Add hover effects for other social media icons as needed */
+
+/* Main Content */
+.main-intro {
+  width: 100%;
+  height: calc(100vh - 30px);
+  text-align: center;
+  padding: 50px;
+  position: relative;
+  z-index: 4; /* Above overlay */
+}
+
+/* Company Name */
+.company-name {
+  margin-top: 150px;
+  font-size: 50px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #f0dd7e;
+  z-index: 4;
+}
+
+/* Tagline */
+.company-tagline {
+  font-size: 35px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #f0dd7e;
+  z-index: 4;
+}
+
+/* Logo */
+.logo img {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  z-index: 4;
+}
+
+/* Main Menu */
+.menu {
+  list-style-type: none;
+  padding-top: 30px;
+  padding-right: 10px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+}
+
+.menu li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.menu li a {
+  color: #fbfbfa;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  color: #5d3fd3;
+}
+
+/* Links */
 .email a,
 .phone a {
   color: #fbfbfa;
-  text-decoration: none; /* Added to remove underline from links */
 }
 
 .email a:hover,
 .phone a:hover {
   color: #5d3fd3;
-  text-decoration: none; /* Ensures underline is removed on hover as well */
+  text-decoration: none;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Other Header Elements */
+.datetime,
+.status {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 0;
 }
 
-.navbar-social-media {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+.status {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.navbar-social-media .button {
+.email a,
+.phone a {
+  text-decoration: none;
+}
+
+.datetime {
   color: #fbfbfa;
+  margin-left: 10px;
 }
 
-.navbar-social-media .button:hover {
-  color: #5d3fd3;
+.clock {
+  margin-right: -5px;
 }
 
-/* Header main navigation and social media styles */
-.header-main-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Dropdown Menu */
+.menu > li {
+  display: inline-block;
+  position: relative;
 }
 
-.header-main-social-media {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
+.menu > li > a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #f0dd7e;
+  text-transform: uppercase;
 }
-.open-status {
+
+.menu .dropdown-content {
   display: none;
-}
-.current-time {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  color: #fbfbfa;
-}
-.email,
-.phone,
-.date-time {
-  margin-right: 5px;
-}
-.time-and-day {
-  display: flex;
-  align-items: center;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 4;
 }
 
-/* Additional Styles */
-.current-time .fas.fa-clock {
-  margin-right: 5px; /* Added margin between clock icon and day of the week */
-  color: #fbfbfa; /* Changed clock icon color */
+.menu .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.menu li:hover > ul.dropdown-content {
+  display: block;
+}
+
+.menu li ul.dropdown-content {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.menu li ul.dropdown-content a {
+  color: #f0dd7e;
+}
+
+/* Logo Positioning */
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
+/* Open/Closed Status */
+/* Corrected styles for Open/Closed status hover effect */
+.status[open]:hover::before,
+.status[closed]:hover::before {
+  content: attr(data-hours);
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  color: #000;
+  z-index: 100;
+  pointer-events: none; /* ensures hover effect is not blocked by the pseudo-element */
+}
+
+/* Ensure the status text color */
+
+.status[open] {
+  color: #aaff00;
+}
+
+.status[closed] {
+  color: #f83207;
+}
+
+/* Update z-index for all relevant elements to ensure they are above the overlay */
+.menu,
+.status[open],
+.status[closed],
+.logo,
+.company-name,
+.company-tagline {
+  z-index: 3; /* Place these elements above the overlay */
+}
+.status[open],
+.status[closed] {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+/* Add hover effect for status element */
+.status[open]:hover,
+.status[closed]:hover {
+  background-color: #f2f2f2; /* Example hover background color change */
+  cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
 }
