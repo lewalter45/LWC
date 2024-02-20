@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Body/Page Styles */
+body {
+  font-family: "Public Sans", sans-serif;
+}
+
+/* About Us Section */
+.about-us {
+  background-image: url("images/about-us-page-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Our Team Section */
+.our-team {
+  background-color: #f9f9f9; /* Background color for the section */
+  padding: 50px 0; /* Padding around the section content */
+  text-align: center; /* Center-align the section content */
+}
+
+.team {
+  display: flex; /* Use flexbox for the team member images */
+  justify-content: center; /* Center-align the team member images */
+  align-items: center; /* Center-align the team member images vertically */
+  flex-wrap: wrap; /* Allow team member images to wrap to the next line if needed */
+}
+
+.team-member {
+  margin: 20px; /* Margin around each team member image */
+}
+
+.team-member img {
+  width: 150px; /* Set a fixed width for the team member images */
+  height: 150px; /* Set a fixed height for the team member images */
+  border-radius: 50%; /* Apply a circular border to the images */
+  margin: 10px; /* Add some margin around each image */
+}
