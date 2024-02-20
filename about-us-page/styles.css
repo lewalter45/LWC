@@ -1,0 +1,107 @@
+/* Reset styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+}
+
+/* About Us Section */
+.about-us {
+  width: 100%;
+  height: 100vh;
+  background-image: url("images/about-us-page-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-us .content img {
+  height: auto;
+  width: 600px;
+  max-width: 100%;
+}
+
+.about-us .text {
+  width: 550px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.about-us .content {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #fbfbfa;
+}
+
+.text h2 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #ccae61;
+}
+
+.text p {
+  color: #fbfbfa;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  margin-bottom: 45px;
+}
+
+/* Our Team Section */
+.our-team {
+  background-color: #fbfbfa;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.our-team .team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.our-team .team-member {
+  margin: 20px;
+}
+
+.our-team .team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+@media screen and (max-width: 1180px) {
+  .about-us {
+    width: 100%;
+    height: auto;
+    padding: 70px 0px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .about-us .content img {
+    margin-bottom: 30px;
+  }
+
+  .text h1 {
+    font-size: 50px;
+    margin: 25px 0;
+  }
+}
