@@ -1,56 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lewalter Construction and Remodeling LLC</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lewalter Construction and Remodeling LLC About Us Page</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
-</head>
+    <link rel="stylesheet" type="text/css" href="about-us-styles.css" />
 
-<body>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- About Us -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-  <main>
-
-    <section class="about-us">
-
-      <div class="content">
-
-        <div class="text">
-          <h1>About Us</h1>
-          <h2>Owner & Contractor</h2>
-          <img src="images/profile-pic.png" alt="Owner & Contractor Image">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="container nav-container">
+          <input class="checkbox" type="checkbox" id="menu-toggle" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <div class="logo">
+            <h1>ABOUT US</h1>
+          </div>
+          <div class="menu-items">
+            <ul>
+              <li><a href="index.html" title="Home">HOME</a></li>
+              <li><a href="about.html" title="About Us">ABOUT US</a></li>
+              <li>
+                <a href="services.html" title="Services">SERVICES</a>
+                <ul class="dropdown-content">
+                  <li>
+                    <a href="services/residential.html" title="Residential"
+                      >Residential</a
+                    >
+                  </li>
+                  <li>
+                    <a href="services/commercial.html" title="Commercial"
+                      >Commercial</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="services/government-contracting.html"
+                      title="Government Contracting"
+                      >Government Contracting</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="projects.html" title="Projects">PROJECTS</a>
+                <ul class="dropdown-content">
+                  <li><a href="projects/past.html" title="Past">Past</a></li>
+                  <li>
+                    <a href="projects/present.html" title="Present">Present</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="blog.html" title="Blog">BLOG</a></li>
+              <li>
+                <a href="contact-us.html" title="Contact Us">CONTACT US</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </nav>
 
-    </section>
-
-    <!-- Our Team -->
-
-    <section class="our-team">
-
-      <h2>Our Team</h2>
-
-      <div class="team">
-
-        <div class="team-member">
-          <img src="images/team-member-1.png" alt="Team Member 1">
-          <img src="images/team-member-2.png" alt="Team Member 2"> 
-          <img src="images/team-member-3.png" alt="Team Member 3">
-          <img src="images/team-member-4.png" alt="Team Member 4">
-        </div>
-
+    <!-- About Us -->
+    <main>
+      <div class="about-us">
+        <h2>Owner & Contractor</h2>
+        <img src="images/profile-pic.png" alt="Owner & Contractor Image" />
+        <p></p>
       </div>
 
-    </section>
-
-  </main>
-
-</body>
-
+      <!-- Our Team -->
+      <section class="our-team">
+        <h2>Our Team</h2>
+        <div class="team">
+          <div class="team-member">
+            <img src="images/team-member-1.png" alt="Team Member 1" />
+            <img src="images/team-member-2.png" alt="Team Member 2" />
+            <img src="images/team-member-3.png" alt="Team Member 3" />
+            <img src="images/team-member-4.png" alt="Team Member 4" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
