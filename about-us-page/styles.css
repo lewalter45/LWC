@@ -16,6 +16,7 @@ body {
 
 .navbar {
   width: 100%;
+  background-color: #ccae61;
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
 }
 
@@ -23,7 +24,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 62px;
+  height: 60px;
 }
 
 .navbar .menu-items {
@@ -82,7 +83,7 @@ body {
   height: 4px;
   width: 100%;
   border-radius: 10px;
-  background: #0e2431;
+  background: #fbfbfa;
 }
 
 .nav-container .hamburger-lines .line1 {
@@ -121,10 +122,10 @@ body {
 
 .logo {
   position: absolute;
-  top: 5px;
+  top: 15px;
   right: 15px;
   font-size: 1.2rem;
-  color: #0e2431;
+  color: #fbfbfa;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
@@ -167,7 +168,6 @@ body {
   max-width: 100%;
 }
 
-
 .about-us .content {
   width: 1280px;
   max-width: 95%;
@@ -191,7 +191,7 @@ body {
   font-weight: 500;
   margin-bottom: 20px;
   text-transform: uppercase;
-  color: #ccae61;
+  color: #fbfbfa;
 }
 
 .text p {
@@ -204,10 +204,9 @@ body {
 
 /* Our Team Section */
 .our-team {
-  background-color: #fbfbfa;
+  background-color: #ccae61;
   padding: 50px 0;
   text-align: center;
-  
 }
 
 .our-team .team {
@@ -241,5 +240,4 @@ body {
   .about-us .content img {
     margin-bottom: 30px;
   }
-
-
+}
