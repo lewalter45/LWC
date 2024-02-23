@@ -151,7 +151,7 @@ body {
 /* About Us Section */
 .about-us {
   width: 100%;
-  height: 100vh;
+  height: 68vh;
   background-image: url("images/about-us-page-background.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -205,7 +205,7 @@ body {
 /* Our Team Section */
 .our-team {
   background-color: #ccae61;
-  padding: 50px 0;
+  padding: 100px 0;
   text-align: center;
 }
 
@@ -240,4 +240,17 @@ body {
   .about-us .content img {
     margin-bottom: 30px;
   }
+}
+
+/* dropdown-content */
+.dropdown-content {
+  display: none;
+}
+
+.dropdown-indicator {
+  margin-left: 5px; /* Adjust as needed */
+}
+
+.menu-items li:hover .dropdown-content {
+  display: block;
 }
